@@ -1,0 +1,127 @@
+/**
+ * Estilos Neobrutalism para Kiki - Plataforma Educativa
+ * Diseño inspirado en aprendizaje creativo y metodología Vibe Coding
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neobrutalism design tokens for educational platform */
+    --border-radius: 0px; /* Sharp corners for bold design */
+    --box-shadow-x: 4px; /* Bold shadows for depth */
+    --box-shadow-y: 4px;
+    --reverse-box-shadow-x: -4px;
+    --reverse-box-shadow-y: -4px;
+    --border-width: 2px; /* Thick borders for emphasis */
+
+    --heading-font-weight: 700;
+    --base-font-weight: 400;
+
+    /* KIKI Educational color palette */
+    --background: rgb(255 255 255); /* Clean white background */
+    --secondary-background: rgb(245 245 247); /* Light gray */
+    --foreground: rgb(0 0 0); /* Black text */
+    --main-foreground: rgb(255 255 255); /* White text on colored backgrounds */
+
+    --main: rgb(147 51 234); /* Purple - creativity and education */
+    --border: rgb(0 0 0); /* Black borders */
+    --ring: rgb(147 51 234);
+    --overlay: rgba(0 0 0 / 0.8);
+
+    /* Neobrutalism shadows */
+    --shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+
+    /* Educational platform colors */
+    --success: rgb(34 197 94); /* Green for achievements */
+    --warning: rgb(250 204 21); /* Yellow for energy/attention */
+    --danger: rgb(239 68 68); /* Red for errors */
+    
+    /* Phase colors for the 5-phase wizard */
+    --chart-1: rgb(250 204 21); /* Yellow - Phase 1 */
+    --chart-2: rgb(59 130 246); /* Blue - Phase 2 */
+    --chart-3: rgb(34 197 94); /* Green - Phase 3 */
+    --chart-4: rgb(251 146 60); /* Orange - Phase 4 */
+    --chart-5: rgb(147 51 234); /* Purple - Phase 5 */
+    --chart-active-dot: #000;
+  }
+
+  .dark {
+    /* Dark mode with weathertorun-inspired colors */
+    --background: rgb(24 24 24); /* Dark background */
+    --secondary-background: rgb(38 38 38); /* Slightly lighter dark */
+    --foreground: rgb(255 255 255); /* White text */
+    --main-foreground: rgb(0 0 0); /* Black text on colored backgrounds */
+
+    --border: rgb(255 255 255); /* White borders in dark mode */
+    --ring: rgb(255 255 255);
+
+    /* Maintain flat design in dark mode */
+    --shadow: none;
+
+    /* Adjusted colors for dark mode */
+    --success: rgb(74 222 128);
+    --warning: rgb(251 191 36);
+    --danger: rgb(248 113 113);
+
+    --chart-active-dot: #fff;
+  }
+
+  body {
+    @apply bg-background text-foreground font-base;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Custom scrollbar styles */
+body,
+.scrollbar {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #000000;
+}
+
+html.dark body,
+html.dark .scrollbar {
+  --sb-track-color: #1f1f1f;
+  --sb-thumb-color: #e6e6e6;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar {
+  width: 20px;
+}
+
+body::-webkit-scrollbar-track,
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-track {
+  border-left: 4px solid #000;
+}
+
+body::-webkit-scrollbar-thumb,
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+}
+
+html.dark body::-webkit-scrollbar-thumb {
+  border-left: 4px solid #000;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body,
+  .scrollbar {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

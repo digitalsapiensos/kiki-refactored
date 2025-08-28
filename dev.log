@@ -1,0 +1,20 @@
+
+> kiki-platform@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.1.0
+   - Local:        http://localhost:3000
+   - Environments: .env
+
+ ✓ Ready in 3.1s
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 2.4s (134 modules)
+ ○ Compiling / ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (116kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ✓ Compiled / in 6.7s (516 modules)
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 1778ms (693 modules)
+ ✓ Compiled /login in 225ms (703 modules)
+   Reload env: .env
+ ✓ Compiled in 826ms (837 modules)
+[?25h
