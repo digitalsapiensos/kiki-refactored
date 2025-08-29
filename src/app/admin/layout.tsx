@@ -21,21 +21,23 @@ export default function AdminLayout({
         <div className="p-4">
           <h2 className="text-xl font-bold mb-6">Kiki Admin</h2>
           <nav className="space-y-2">
-            {/* TODO: Links de navegación admin */}
             <a href="/admin" className="block p-2 hover:bg-gray-800 rounded">
-              Dashboard
+              📊 Dashboard
+            </a>
+            <a href="/admin/prompts" className="block p-2 hover:bg-gray-800 rounded bg-gray-800">
+              🤖 System Prompts
             </a>
             <a href="/admin/users" className="block p-2 hover:bg-gray-800 rounded">
-              Usuarios
+              👥 Usuarios
             </a>
             <a href="/admin/projects" className="block p-2 hover:bg-gray-800 rounded">
-              Proyectos
+              📁 Proyectos
             </a>
             <a href="/admin/llm-config" className="block p-2 hover:bg-gray-800 rounded">
-              Configuración LLM
+              ⚙️ Configuración LLM
             </a>
             <a href="/admin/analytics" className="block p-2 hover:bg-gray-800 rounded">
-              Analytics
+              📈 Analytics
             </a>
           </nav>
         </div>

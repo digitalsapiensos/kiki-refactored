@@ -19,7 +19,7 @@ export interface Database {
           id: string
           email: string
           full_name: string | null
-          role: 'user' | 'admin'
+          role: 'user' | 'superadmin'
           plan: 'free' | 'pro' | 'enterprise'
           project_limit: number
           created_at: string
@@ -29,7 +29,7 @@ export interface Database {
           id: string
           email: string
           full_name?: string | null
-          role?: 'user' | 'admin'
+          role?: 'user' | 'superadmin'
           plan?: 'free' | 'pro' | 'enterprise'
           project_limit?: number
           created_at?: string
@@ -39,7 +39,7 @@ export interface Database {
           id?: string
           email?: string
           full_name?: string | null
-          role?: 'user' | 'admin'
+          role?: 'user' | 'superadmin'
           plan?: 'free' | 'pro' | 'enterprise'
           project_limit?: number
           created_at?: string
