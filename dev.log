@@ -1,20 +1,23 @@
 
 > kiki-platform@0.1.0 dev
-> next dev
+> next dev -p 8888
 
-   ▲ Next.js 14.1.0
-   - Local:        http://localhost:3000
-   - Environments: .env
-
- ✓ Ready in 3.1s
- ○ Compiling /src/middleware ...
- ✓ Compiled /src/middleware in 2.4s (134 modules)
- ○ Compiling / ...
-<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (116kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
- ✓ Compiled / in 6.7s (516 modules)
- ○ Compiling /signup ...
- ✓ Compiled /signup in 1778ms (693 modules)
- ✓ Compiled /login in 225ms (703 modules)
-   Reload env: .env
- ✓ Compiled in 826ms (837 modules)
+ ⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::8888
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at /Users/higinieduardmoredomingo/Meta Agent - Kick Off Starter/kiki/node_modules/next/dist/server/lib/start-server.js:278:16
+    at new Promise (<anonymous>)
+    at startServer (/Users/higinieduardmoredomingo/Meta Agent - Kick Off Starter/kiki/node_modules/next/dist/server/lib/start-server.js:190:11)
+    at /Users/higinieduardmoredomingo/Meta Agent - Kick Off Starter/kiki/node_modules/next/dist/server/lib/start-server.js:308:52
+    at Span.traceAsyncFn (/Users/higinieduardmoredomingo/Meta Agent - Kick Off Starter/kiki/node_modules/next/dist/trace/trace.js:151:26)
+    at process.<anonymous> (/Users/higinieduardmoredomingo/Meta Agent - Kick Off Starter/kiki/node_modules/next/dist/server/lib/start-server.js:308:35)
+    at process.emit (node:events:507:28) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 8888
+}
 [?25h
